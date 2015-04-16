@@ -1,0 +1,12 @@
+fgddem2pgsql
+
+0.2.2 - 16th April, 2015
+* -idd parameter expired.
+* -er parameter added instead of -idd
+
+0.2.1 - 1st March, 2015
+* new parameter (-idd) added.
+
+0.1.2 - 3rd Feburary, 2015
+* configure script bundles.
+

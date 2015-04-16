@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
+<!--   UpgradeCode="..." -->
+<Product Name="fgddem2pgsql 0.1.2"
+  Language="0"
+  Id="FEB0E0AF-A146-436C-82BC-E883427D9147"
+  Manufacturer="yellow73.github@gmailcom"
+  UpgradeCode="CC6022D5-09FE-4BF6-B198-59A39FAC5998"
+  Version="0.1.2"
+>
+  <Package Id="*" Keywords="Installer"
+    Description="fgddem2pgsql Installer"
+    InstallerVersion="405"
+    Compressed="yes"
+  />
+
+  <Media Id="1" Cabinet="fd2p.cab" EmbedCab="yes" DiskPrompt="Disk 1" />
+  <Property Id="DiskPrompt" Value="fgddem2pgsql Disk 1" />
+
+  <Directory Id="TARGETDIR" Name="SourceDir">
+    <Directory Id="ProgramFilesFolder" Name="PFiles">
+      <Directory Id="yellow73.github">
+        <Directory Id="INSTALLDIR" Name="fgddem2pgsql">
+          <Component Id="MainExecutable"
+            Guid="42F33525-5F54-40D1-A745-8D1125EAD5B4">
+            <File Id="FGDDEM2PGSQL_EXE"
+              Name="fgddem2pgsql.exe"
+              DiskId="1"
+              Source="Release\fgddem2pgsql.exe"
+              KeyPath="yes">
+            </File>
+          </Component>
+          <Component Id="LibExpatDLL">
+            <File Id="LibExpatDLL"
+              Name="libexpat.dll"
+              DiskId="1"
+              Source="Release\libexpat.dll"
+              KeyPath="yes">
+            </File>
+          </Component>
+          <Component Id="COPYING">
+            <File Id="COPYING"
+              Name="COPYING"
+              DiskId="1"
+              Source="..\COPYING"
+              KeyPath="yes">
+            </File>
+          </Component>
+          <Component Id="EXPATCOPYING">
+            <File Id="EXPATCOPYING"
+              Name="EXPAT-COPYING.txt"
+              DiskId="1"
+              Source="..\EXPAT-COPYING.txt"
+              KeyPath="yes">
+            </File>
+          </Component>
+        </Directory>
+      </Directory>
+    </Directory>
+  </Directory>
+
+  <DirectoryRef Id="TARGETDIR">
+    <Merge Id="VCRedist"
+      SourceFile="C:\Program Files (x86)\Common Files\Merge Modules\Microsoft_VC120_CRT_x86.msm"
+      DiskId="1"
+      Language="0" />
+  </DirectoryRef>
+
+  <Feature Id="FGDDEM2PGSQL_ALL" Level="1">
+    <ComponentRef Id="MainExecutable" />
+    <ComponentRef Id="LibExpatDLL" />
+    <ComponentRef Id="COPYING" />
+    <ComponentRef Id="EXPATCOPYING" />
+  </Feature>
+  <Feature Id="VCRedist" Title="Visual C++ 2013 Runtime" AllowAdvertise="no" Display="hidden" Level="1">
+    <MergeRef Id="VCRedist"/>
+  </Feature>
+
+</Product>
+</Wix>

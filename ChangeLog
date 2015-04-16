@@ -1,0 +1,43 @@
+2015-04-16 yellow73 <yellow73.github@gmail.com>
+
+* -iid parameter expired.
+* -er parameter added instead of -iid
+* Fixed datalist.c (fixed chunks are not used by fgddem2pgsql)
+
+2015-03-01 yellow73 <yellow73.github@gmail.com>
+
+* 0.2.1
+
+2015-02-04 boiledorange73 <boiledorange73@gmail.com>
+
+* WiX files added.
+
+2015-02-04 yellow73 <yellow73.github@gmail.com>
+
+* Disuse files deleted and .gitignore added
+
+2015-02-04 yellow73 <yellow73.github@gmail.com>
+
+* EXPAT-COPYING.txt added.
+
+2015-02-03 yellow73 <yellow73.github@gmail.com>
+
+* add some missings
+
+2015-02-03 yellow73 <yellow73.github@gmail.com>
+
+* symlinks removed
+
+2015-02-03 yellow73 <yellow73.github@gmail.com>
+
+* 0.1.2
+
+2015-02-03 yellow73 <yellow73.github@gmail.com>
+
+* V 0.1.1
+* For MS-VS folder is added.
+* Endian deciding function is added.
+
+2015-02-01 yellow73 <yellow73.github@gmail.com>
+
+* v0.1

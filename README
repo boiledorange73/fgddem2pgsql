@@ -1,0 +1,8 @@
+fgddem2pgsql
+
+A converter from
+FGD (Fundamental Geospatial Data of Japan, by GSI) DEM
+to PostGIS raster.
+
+This requires Expat <http://expat.sourceforge.net/>.
+

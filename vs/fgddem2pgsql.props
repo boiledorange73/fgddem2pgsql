@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ImportGroup Label="PropertySheets" />
+  <PropertyGroup Label="UserMacros">
+    <EXPAT_DIR>C:\Program Files (x86)\Expat 2.1.0</EXPAT_DIR>
+    <EXPAT_INCLUDE>$(EXPAT_DIR)\Source\lib</EXPAT_INCLUDE>
+    <EXPAT_LIB>$(EXPAT_DIR)\Bin\libexpat.lib</EXPAT_LIB>
+    <EXPAT_DLL>$(EXPAT_DIR)\Bin\libexpat.dll</EXPAT_DLL>
+  </PropertyGroup>
+  <PropertyGroup />
+  <ItemDefinitionGroup>
+    <ClCompile>
+      <AdditionalIncludeDirectories>
+      </AdditionalIncludeDirectories>
+      <CompileAs>
+      </CompileAs>
+      <PrecompiledHeader />
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>
+      </AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <BuildMacro Include="EXPAT_DIR">
+      <Value>$(EXPAT_DIR)</Value>
+      <EnvironmentVariable>true</EnvironmentVariable>
+    </BuildMacro>
+    <BuildMacro Include="EXPAT_INCLUDE">
+      <Value>$(EXPAT_INCLUDE)</Value>
+      <EnvironmentVariable>true</EnvironmentVariable>
+    </BuildMacro>
+    <BuildMacro Include="EXPAT_LIB">
+      <Value>$(EXPAT_LIB)</Value>
+      <EnvironmentVariable>true</EnvironmentVariable>
+    </BuildMacro>
+    <BuildMacro Include="EXPAT_DLL">
+      <Value>$(EXPAT_DLL)</Value>
+      <EnvironmentVariable>true</EnvironmentVariable>
+    </BuildMacro>
+  </ItemGroup>
+</Project>
